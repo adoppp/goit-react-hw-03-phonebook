@@ -22,7 +22,6 @@ export class ContactForm extends Component {
 
     onAddContact({ id, name, number });
 
-
     this.setState({
       name: '',
       number: '',
