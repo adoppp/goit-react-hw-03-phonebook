@@ -4,11 +4,9 @@ import { ContactItem } from './ContactItem/ContatcItem';
 export const ContactList = ({ contacts, filter, onDeleteContact }) => {
   return (
     <div>
-      {contacts
-        .filter(contact =>
+      {contacts.filter(contact =>
           contact.name.toLowerCase().includes(filter.toLowerCase().trim())
-        )
-        .map(contact => {
+        ).map(contact => {
           const { id } = contact;
           return (
             <ContactItem
