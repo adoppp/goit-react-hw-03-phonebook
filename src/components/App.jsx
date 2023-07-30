@@ -35,9 +35,11 @@ export class App extends Component {
   }
 
   componentDidMount() {
-    this.setState(prevState => {
+    if (localStorage.getItem('contacts')) {
+      this.setState(prevState => {
       return { contacts: JSON.parse(localStorage.getItem('contacts')) };
     });
+    }
 }
 
   handleDeleteContact = id => {
