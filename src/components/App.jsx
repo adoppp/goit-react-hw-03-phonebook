@@ -40,7 +40,7 @@ export class App extends Component {
     //   return { contacts: JSON.parse(localStorage.getItem('contacts')) };
     // });
     // }
-    const getContacts = JSON.parse(window.localStorage.getItem(CONTACT_KEY));
+    const getContacts = JSON.parse(window.localStorage.getItem('contacts'));
     if (getContacts) {
       this.setState({
         contacts: getContacts,
